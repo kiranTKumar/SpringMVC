@@ -29,7 +29,8 @@ public class ProductDaoImpl implements ProductsDao {
 	 *
 	 */
 	public boolean updateTheProductsAvailableCount(String saleType, Product product) {
-		return prodInventory.adjustInventoryOfAProduct(saleType, product);
+//		return prodInventory.adjustInventoryOfAProduct(saleType, product);
+		return prodInventory.lambdaAdjustInventoryOfAProduct(saleType, product);
 	}
 	
 	

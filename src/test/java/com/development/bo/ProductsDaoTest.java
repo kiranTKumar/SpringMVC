@@ -149,9 +149,9 @@ public class ProductsDaoTest {
 	@Test
 	public void test6MultiThreadingOrdersQtyChange() throws InterruptedException{
 		
-		/*test1AddGivenValidProductToInvetory();
+		test1AddGivenValidProductToInvetory();
 		test2AddExistingProductToInvetoryWithChangeInPrice();
-		test3AddExistingProductPriceButDifferentProduct();*/
+		test3AddExistingProductPriceButDifferentProduct();
 	
 		Product product = new Product(1L, "first product","firstCategory",20.00f, 20);//1_20-->20--B
 		Thread t1 = new Thread(new ProductCheck(product, SaleTypes.SOLD.name(), prodDao));//1_20-->19--A
